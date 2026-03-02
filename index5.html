@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miguel Alves | Web Developer</title>
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      scroll-behavior: smooth;
+    }
+
+    /* Glass effect */
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(90deg, #38bdf8, #6366f1, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Button hover glow */
+    .btn-glow:hover {
+      box-shadow: 0 0 25px rgba(99,102,241,0.6);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="fixed w-full z-50 glass">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold tracking-wider">Miguel.dev</h1>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#sobre" class="hover:text-indigo-400 transition">Sobre</a>
+        <a href="#servicos" class="hover:text-indigo-400 transition">Serviços</a>
+        <a href="#projetos" class="hover:text-indigo-400 transition">Projetos</a>
+        <a href="#contato" class="hover:text-indigo-400 transition">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center justify-center text-center px-6">
+    <div>
+      <h2 class="text-4xl md:text-6xl font-black leading-tight">
+        Sites modernos que
+        <span class="gradient-text">vendem sua marca</span>
+      </h2>
+      <p class="mt-6 text-lg text-slate-300 max-w-xl mx-auto">
+        Desenvolvo sites profissionais de divulgação, landing pages e páginas institucionais com foco em design sofisticado e performance.
+      </p>
+      <div class="mt-10 flex justify-center gap-6">
+        <a href="#contato" class="px-8 py-3 bg-indigo-600 rounded-xl font-semibold btn-glow transition">Solicitar orçamento</a>
+        <a href="#projetos" class="px-8 py-3 border border-slate-500 rounded-xl hover:bg-slate-800 transition">Ver projetos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="py-24 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6">Sobre mim</h3>
+      <p class="text-slate-300 leading-relaxed">
+        Sou desenvolvedor focado em criação de sites modernos utilizando HTML, CSS, JavaScript e TailwindCSS.
+        Meu objetivo é criar páginas elegantes, rápidas e estratégicas para fortalecer sua presença digital.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="py-24 px-6 bg-slate-900">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-16">Serviços</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass p-8 rounded-2xl hover:scale-105 transition">
+          <h4 class="text-xl font-semibold mb-4">Landing Pages</h4>
+          <p class="text-slate-300">Páginas focadas em conversão para captação de clientes e vendas.</p>
+        </div>
+        <div class="glass p-8 rounded-2xl hover:scale-105 transition">
+          <h4 class="text-xl font-semibold mb-4">Sites Institucionais</h4>
+          <p class="text-slate-300">Sites profissionais para apresentar sua empresa ou marca.</p>
+        </div>
+        <div class="glass p-8 rounded-2xl hover:scale-105 transition">
+          <h4 class="text-xl font-semibold mb-4">Design Moderno</h4>
+          <p class="text-slate-300">Interfaces sofisticadas com foco em experiência do usuário.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-16">Projetos Recentes</h3>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="glass rounded-2xl p-6">
+          <div class="h-48 bg-slate-800 rounded-xl mb-6"></div>
+          <h4 class="text-xl font-semibold">Projeto Exemplo 1</h4>
+          <p class="text-slate-400">Landing page moderna para empresa local.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="h-48 bg-slate-800 rounded-xl mb-6"></div>
+          <h4 class="text-xl font-semibold">Projeto Exemplo 2</h4>
+          <p class="text-slate-400">Site institucional elegante e responsivo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="py-24 px-6 bg-slate-900">
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6">Vamos trabalhar juntos?</h3>
+      <p class="text-slate-300 mb-10">Entre em contato para solicitar um orçamento.</p>
+      <a href="mailto:seuemail@email.com" class="px-10 py-4 bg-indigo-600 rounded-xl font-semibold btn-glow transition">
+        Enviar mensagem
+      </a>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-slate-500 text-sm">
+    © 2026 Miguel Alves - Todos os direitos reservados.
+  </footer>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.6/bundled/lenis.min.js"></script>
+  <script>
+    const lenis = new Lenis({
+      duration: 1.2,
+      smoothWheel: true
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  </script>
+
+</body>
+</html>
