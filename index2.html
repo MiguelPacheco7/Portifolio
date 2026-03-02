@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Premium | Sites que Convertem</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter e Playfair Display para sofisticação -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --bg-dark: #050505;
+            --accent: #8b5cf6;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Efeito de Gradiente Animado no Fundo */
+        .glass-gradient {
+            background: radial-gradient(circle at 50% -20%, #1e293b, transparent),
+                        radial-gradient(circle at 0% 100%, #0f172a, transparent);
+        }
+
+        /* Custom Cursor (Opcional, mas elegante) */
+        .glow-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Efeito de Vidro (Glassmorphism) */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-5px);
+        }
+
+        /* Animação de entrada suave */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Botão Customizado */
+        .btn-premium {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-premium::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-premium:hover::after {
+            left: 100%;
+        }
+
+        /* Lenis Smooth Scroll necessário */
+        html.lenis {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="glass-gradient">
+    <div class="glow-mesh" id="mesh"></div>
+
+    <!-- Header / Navbar -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-black/20 backdrop-blur-md">
+        <div class="text-xl font-bold tracking-tighter flex items-center gap-2">
+            <span class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-xs">DB</span>
+            <span class="hidden sm:inline">DEV.STUDIO</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-light text-gray-400">
+            <a href="#home" class="hover:text-white transition-colors">Início</a>
+            <a href="#servicos" class="hover:text-white transition-colors">Serviços</a>
+            <a href="#portfolio" class="hover:text-white transition-colors">Portfólio</a>
+        </div>
+        <a href="#contato" class="bg-white text-black px-6 py-2 rounded-full text-sm font-semibold btn-premium">
+            Falar com Especialista
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
+        <div class="reveal">
+            <span class="text-blue-500 font-semibold tracking-widest text-xs uppercase mb-4 block">Disponível para novos projetos</span>
+            <h1 class="text-5xl md:text-8xl font-bold leading-tight mb-6">
+                Sua marca merece um<br>
+                <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">design extraordinário.</span>
+            </h1>
+            <p class="max-w-2xl text-gray-400 text-lg md:text-xl mb-10 font-light">
+                Crio sites de divulgação premium para profissionais e instituições que buscam autoridade imediata no mercado digital.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contato" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg shadow-blue-500/20">
+                    Começar meu projeto
+                </a>
+                <a href="#portfolio" class="border border-white/10 hover:bg-white/5 text-white px-8 py-4 rounded-full font-medium transition-all">
+                    Ver Portfólio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="reveal mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Especialidades</h2>
+            <div class="h-1 w-20 bg-blue-600"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Serviço 1 -->
+            <div class="glass-card p-8 rounded-3xl reveal">
+                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-500 mb-6">
+                    <i data-lucide="layout"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Sites de Divulgação</h3>
+                <p class="text-gray-400 font-light leading-relaxed">
+                    Ideal para clínicas de estética e médicos. Foco total em passar confiança e capturar agendamentos via WhatsApp.
+                </p>
+            </div>
+
+            <!-- Serviço 2 -->
+            <div class="glass-card p-8 rounded-3xl reveal" style="transition-delay: 0.1s;">
+                <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-500 mb-6">
+                    <i data-lucide="church"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Igrejas & ONGs</h3>
+                <p class="text-gray-400 font-light leading-relaxed">
+                    Plataformas modernas para divulgar eventos, cultos e conectar a comunidade de forma eficiente e acolhedora.
+                </p>
+            </div>
+
+            <!-- Serviço 3 -->
+            <div class="glass-card p-8 rounded-3xl reveal" style="transition-delay: 0.2s;">
+                <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-500 mb-6">
+                    <i data-lucide="zap"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4">Performance & SEO</h3>
+                <p class="text-gray-400 font-light leading-relaxed">
+                    Sites que carregam instantaneamente e são otimizados para aparecer nas primeiras páginas do Google local.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Mockup Section -->
+    <section id="portfolio" class="py-24 bg-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Resultados que inspiram</h2>
+                    <p class="text-gray-400">Transformando presenças digitais em ativos de valor.</p>
+                </div>
+                <div class="mt-6 md:mt-0 text-blue-500 font-medium">Ver todos os projetos →</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Case 1 -->
+                <div class="reveal group cursor-pointer">
+                    <div class="overflow-hidden rounded-3xl bg-gray-900 aspect-video mb-6">
+                        <div class="w-full h-full bg-gradient-to-br from-gray-800 to-gray-950 flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
+                             <span class="text-gray-600 font-bold">Preview: Clínica de Estética</span>
+                        </div>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2">Clínica Estética Aura</h4>
+                    <p class="text-gray-500">Design Minimalista & Conversão</p>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="reveal group cursor-pointer" style="transition-delay: 0.2s;">
+                    <div class="overflow-hidden rounded-3xl bg-gray-900 aspect-video mb-6">
+                         <div class="w-full h-full bg-gradient-to-br from-blue-900/20 to-black flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
+                            <span class="text-gray-600 font-bold">Preview: Igreja Renovação</span>
+                        </div>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2">Igreja Renovação</h4>
+                    <p class="text-gray-500">Portal de Comunidade & Eventos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contato -->
+    <section id="contato" class="py-24 px-6 text-center">
+        <div class="max-w-3xl mx-auto glass-card p-12 md:p-20 rounded-[3rem] reveal">
+            <h2 class="text-4xl md:text-6xl font-bold mb-8 italic serif">Vamos construir algo memorável juntos?</h2>
+            <p class="text-gray-400 mb-12 text-lg">
+                Seja para sua clínica, igreja ou negócio local, o próximo nível começa com um clique.
+            </p>
+            <a href="https://wa.me/SEUNUMERO" class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-full font-bold text-lg transition-all shadow-xl shadow-blue-500/30">
+                <i data-lucide="message-circle"></i> Me chame no WhatsApp
+            </a>
+            <div class="mt-12 flex justify-center gap-6 text-gray-500">
+                <i data-lucide="instagram" class="hover:text-white cursor-pointer"></i>
+                <i data-lucide="linkedin" class="hover:text-white cursor-pointer"></i>
+                <i data-lucide="mail" class="hover:text-white cursor-pointer"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
+        <p>&copy; 2024 SeuNome Dev Studio. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Lenis for Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script>
+        // 1. Inicializar Lenis (Efeito de Rolagem Suave)
+        const lenis = new Lenis()
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+
+        // 2. Lucide Icons
+        lucide.createIcons();
+
+        // 3. Efeito Reveal ao rolar
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // 4. Mouse Mesh Glow Effect
+        const mesh = document.getElementById('mesh');
+        window.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth) * 100;
+            const y = (e.clientY / window.innerHeight) * 100;
+            mesh.style.setProperty('--x', x + '%');
+            mesh.style.setProperty('--y', y + '%');
+        });
+    </script>
+</body>
+</html>
