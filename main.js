@@ -1,35 +1,59 @@
-// 1. Inicializar Lenis (Rolagem Suave Premium)
-const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smoothWheel: true
-})
+document.documentElement.classList.add('js');
 
-function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
+const menuButton = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('#primary-nav');
+
+function setMenuOpen(open) {
+    if (!menuButton || !navigation) return;
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    navigation.classList.toggle('is-open', open);
 }
-requestAnimationFrame(raf)
 
-// 2. Lucide Icons
-lucide.createIcons();
-
-// 3. Observer para Revelação Suave (Scroll Reveal)
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
+if (menuButton && navigation) {
+    menuButton.addEventListener('click', () => {
+        setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true');
     });
-}, { threshold: 0.1 });
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    navigation.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setMenuOpen(false));
+    });
 
-// 4. Mesh Glow seguindo o cursor
-const mesh = document.getElementById('mesh');
-window.addEventListener('mousemove', (e) => {
-    const x = (e.clientX / window.innerWidth) * 100;
-    const y = (e.clientY / window.innerHeight) * 100;
-    mesh.style.setProperty('--x', x + '%');
-    mesh.style.setProperty('--y', y + '%');
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') setMenuOpen(false);
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 680) setMenuOpen(false);
+    });
+}
+
+const year = document.querySelector('#current-year');
+if (year) year.textContent = String(new Date().getFullYear());
+
+document.querySelectorAll('.project-image').forEach((image) => {
+    const showFallback = () => {
+        image.hidden = true;
+    };
+
+    image.addEventListener('error', showFallback, { once: true });
+    if (image.complete && image.naturalWidth === 0) showFallback();
 });
+
+const revealItems = document.querySelectorAll('.reveal');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if ('IntersectionObserver' in window && !reduceMotion) {
+    const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                currentObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    revealItems.forEach((item) => observer.observe(item));
+} else {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
+}

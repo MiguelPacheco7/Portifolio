@@ -1,208 +1,201 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miguel.dev | Sites que Elevam Marcas</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/output.css">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter e Playfair Display -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
-        rel="stylesheet">
-    <!-- Lucide Icons -->
-
+    <meta name="theme-color" content="#0b1020">
+    <meta name="description" content="Miguel Pacheco cria sites modernos e responsivos para profissionais, negócios e instituições. Conheça projetos para uma igreja e para a clínica de estética da Dra. Marília.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Miguel.dev | Sites que Elevam Marcas">
-    <meta property="og:description" content="Desenvolvimento de sites profissionais e modernos para impulsionar sua marca.">
-
-
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <meta property="og:title" content="Miguel Pacheco — Desenvolvimento web">
+    <meta property="og:description" content="Sites modernos, responsivos e pensados para apresentar melhor o seu trabalho.">
+    <link rel="icon" type="image/svg+xml" href="/Assets/favicon.svg">
+    <title>Miguel Pacheco — Desenvolvimento web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
 
-<body class="main-bg">
-    <div class="glow-mesh" id="mesh"></div>
+    <header class="site-header">
+        <div class="nav-shell">
+            <a class="brand" href="#inicio" aria-label="Miguel Pacheco — início">
+                <span class="brand-mark" aria-hidden="true">MP</span>
+                <span class="brand-name">Miguel Pacheco<span class="brand-dot">.</span></span>
+            </a>
 
-    <!-- Header / Navbar -->
-    <nav
-        class="fixed top-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-[#0f172a]/80 backdrop-blur-xl border-b border-white/5">
-        <div class="text-xl font-black tracking-tighter flex items-center gap-2">
-            <span
-                class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-xs shadow-lg shadow-indigo-500/20">MA</span>
-            <span class="hidden sm:inline">MIGUEL.DEV</span>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="primary-nav" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+
+            <nav class="site-nav" id="primary-nav" aria-label="Navegação principal">
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">O que faço</a>
+                <a href="#projetos">Projetos</a>
+                <a class="nav-contact" href="#contato">Vamos conversar <span aria-hidden="true">↗</span></a>
+            </nav>
         </div>
-        <div class="hidden md:flex gap-10 text-sm font-medium text-slate-400">
-            <a href="#home" class="hover:text-white transition-colors">Início</a>
-            <a href="#servicos" class="hover:text-white transition-colors">Serviços</a>
-            <a href="#portfolio" class="hover:text-white transition-colors">Portfólio</a>
-        </div>
-        <a href="#contato"
-            class="bg-indigo-600 text-white px-6 py-2.5 rounded-xl text-sm font-bold btn-premium shadow-xl hover:bg-indigo-500 transition-all">
-            Solicitar Orçamento
-        </a>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-        <div class="reveal">
-            <span
-                class="inline-block px-4 py-1.5 mb-6 border border-indigo-500/30 bg-indigo-500/10 rounded-full text-indigo-400 font-semibold tracking-wide text-[10px] uppercase">
-                Ascensão no Meio Digital
-            </span>
-            <h1 class="text-5xl md:text-8xl font-black leading-[1.1] mb-8">
-                Sites modernos que<br>
-                <span class="gradient-text italic">vendem sua marca.</span>
-            </h1>
-            <p class="text-slate-400 text-lg md:text-xl mb-12 font-light leading-relaxed">
-                Desenvolvo soluções para <span class="text-white font-normal">profissionais autônomos</span>,
-                <span class="text-white font-normal">instituições</span> e <span
-                    class="text-white font-normal">comércios</span> que buscam autoridade e resultados.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                <a href="#contato"
-                    class="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-4 rounded-2xl font-bold transition-all shadow-2xl shadow-indigo-500/40 btn-premium">
-                    Começar meu projeto
-                </a>
-                <a href="#portfolio"
-                    class="border border-slate-700 hover:bg-white/5 text-white px-10 py-4 rounded-2xl font-bold transition-all">
-                    Ver Projetos
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Serviços -->
-    <section id="servicos" class="py-32 px-6 max-w-7xl mx-auto">
-        <div class="reveal mb-20 text-center md:text-left">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">Soluções Estratégicas</h2>
-            <div class="h-1.5 w-24 bg-indigo-600 rounded-full"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass-card p-10 rounded-[2.5rem] reveal">
-                <div
-                    class="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center text-indigo-400 mb-8">
-                    <i data-lucide="target"></i>
+    <main id="conteudo">
+        <section class="hero section-wrap" id="inicio">
+            <div class="hero-copy reveal">
+                <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> DESENVOLVIMENTO WEB · PORTFÓLIO</p>
+                <h1>Um bom trabalho merece uma presença digital <span class="gradient-text">à altura.</span></h1>
+                <p class="hero-description">Sou Miguel Pacheco. Crio sites atuais e responsivos para profissionais, negócios e instituições que querem se apresentar melhor na internet.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="mailto:miguelpacheco.br@gmail.com?subject=Vamos%20conversar%20sobre%20um%20site">
+                        Vamos conversar <span class="button-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="button button-quiet" href="#projetos">Conheça meus projetos <span aria-hidden="true">↓</span></a>
                 </div>
-                <h3 class="text-2xl font-bold mb-5">Landing Pages</h3>
-                <p class="text-slate-400 font-light leading-relaxed text-lg">
-                    Páginas focadas em conversão para captação de clientes e vendas. Ideais para campanhas de marketing
-                    agressivas.
-                </p>
+                <div class="hero-footnote"><span class="footnote-line" aria-hidden="true"></span> Desenvolvimento com atenção ao visual, à clareza e à experiência em qualquer tela.</div>
             </div>
 
-            <div class="glass-card p-10 rounded-[2.5rem] reveal" style="transition-delay: 0.1s;">
-                <div class="w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center text-sky-400 mb-8">
-                    <i data-lucide="shield-check"></i>
+            <div class="hero-visual reveal" aria-label="Composição gráfica com as iniciais de Miguel Pacheco">
+                <div class="visual-orbit orbit-a" aria-hidden="true"></div>
+                <div class="visual-orbit orbit-b" aria-hidden="true"></div>
+                <div class="visual-cross cross-a" aria-hidden="true">+</div>
+                <div class="visual-cross cross-b" aria-hidden="true">+</div>
+                <div class="visual-card">
+                    <div class="visual-card-top"><span class="visual-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>IDEIAS EM CONSTRUÇÃO</span></div>
+                    <div class="visual-monogram" aria-hidden="true">M<span>P</span></div>
+                    <div class="visual-card-bottom"><span>DESIGN<br>& DESENVOLVIMENTO</span><span class="visual-index">01 — 02</span></div>
                 </div>
-                <h3 class="text-2xl font-bold mb-5">Sites Institucionais</h3>
-                <p class="text-slate-400 font-light leading-relaxed text-lg">
-                    Sites profissionais para apresentar sua empresa ou marca. Perfeito para instituições, comércios e
-                    profissionais da saúde.
-                </p>
+                <div class="floating-note"><span class="floating-note-icon" aria-hidden="true">✳</span><span><strong>Feito para pessoas</strong><small>e projetos de verdade</small></span></div>
+                <span class="visual-caption">MIGUEL PACHECO / WEB</span>
             </div>
+        </section>
 
-            <div class="glass-card p-10 rounded-[2.5rem] reveal" style="transition-delay: 0.2s;">
-                <div
-                    class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-400 mb-8">
-                    <i data-lucide="palette"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-5">Design Moderno</h3>
-                <p class="text-slate-400 font-light leading-relaxed text-lg">
-                    Interfaces sofisticadas com foco em experiência do usuário. Design limpo, rápido e focado em passar
-                    autoridade.
-                </p>
+        <div class="capabilities-strip" aria-label="Áreas de atuação">
+            <div class="capabilities-inner">
+                <span>DESENVOLVIMENTO WEB</span><i aria-hidden="true"></i><span>DESIGN RESPONSIVO</span><i aria-hidden="true"></i><span>PRESENÇA DIGITAL</span>
             </div>
         </div>
-    </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-32 bg-black/10">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-20 reveal">
-                <div class="max-w-xl">
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 italic serif">Projetos de impacto</h2>
-                    <p class="text-slate-400 text-lg">Elevando o padrão digital de marcas que não aceitam o comum.</p>
-                </div>
-                <div
-                    class="mt-8 md:mt-0 text-indigo-400 font-bold hover:text-white transition-colors cursor-pointer group">
-                    Explorar portfólio completo <span
-                        class="inline-block transition-transform group-hover:translate-x-2">→</span>
+        <section class="about section-wrap section-space" id="sobre">
+            <div class="section-kicker reveal"><span>01</span> / SOBRE</div>
+            <div class="about-content reveal">
+                <h2>Tecnologia com um olhar <span class="serif-accent">mais humano.</span></h2>
+                <div class="about-text">
+                    <p>Um site costuma ser o primeiro contato de alguém com o seu trabalho. Por isso, cada projeto precisa ser fácil de entender, agradável de navegar e funcionar bem no celular.</p>
+                    <p>Gosto de transformar ideias em experiências digitais simples e bem cuidadas — com atenção a cada detalhe, do primeiro olhar ao último clique.</p>
                 </div>
             </div>
+        </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                <div class="reveal group">
-                    <div
-                        class="overflow-hidden rounded-[2.5rem] bg-[#1e293b] aspect-video mb-8 relative border border-white/5">
-                        <div
-                            class="absolute inset-0 bg-linear-to-t from-[#0f172a]/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-10">
-                            <span class="text-white text-sm font-semibold tracking-widest uppercase">Visualizar Caso de
-                                Estudo</span>
-                        </div>
-                        <div
-                            class="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-1000">
-                            <span class="text-slate-500 font-black text-2xl uppercase tracking-tighter">Profissional
-                                Autônomo</span>
-                        </div>
+        <section class="services section-wrap section-space" id="servicos">
+            <div class="section-heading reveal">
+                <div>
+                    <div class="section-kicker"><span>02</span> / COMO POSSO AJUDAR</div>
+                    <h2>O essencial, <span class="serif-accent">bem feito.</span></h2>
+                </div>
+                <p>Uma presença online alinhada ao seu projeto, sem complicar o caminho.</p>
+            </div>
+            <div class="service-list">
+                <article class="service-item reveal">
+                    <span class="service-number">01</span>
+                    <div><h3>Sites institucionais</h3><p>Apresente sua empresa, clínica ou instituição com clareza e personalidade.</p></div>
+                    <span class="service-symbol" aria-hidden="true">↗</span>
+                </article>
+                <article class="service-item reveal">
+                    <span class="service-number">02</span>
+                    <div><h3>Landing pages</h3><p>Uma página objetiva para destacar um serviço, uma campanha ou uma ideia.</p></div>
+                    <span class="service-symbol" aria-hidden="true">↗</span>
+                </article>
+                <article class="service-item reveal">
+                    <span class="service-number">03</span>
+                    <div><h3>Design responsivo</h3><p>Uma experiência visual consistente, feita para telas grandes e pequenas.</p></div>
+                    <span class="service-symbol" aria-hidden="true">↗</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="projects section-space" id="projetos">
+            <div class="section-wrap">
+                <div class="section-heading projects-heading reveal">
+                    <div>
+                        <div class="section-kicker"><span>03</span> / TRABALHOS SELECIONADOS</div>
+                        <h2>Projetos com <span class="serif-accent">propósito.</span></h2>
                     </div>
-                    <h4 class="text-3xl font-bold mb-3">Consultoria Premium</h4>
-                    <p class="text-slate-500 font-medium">Design Minimalista & Alta Performance</p>
+                    <p>Dois projetos em destaque por enquanto. Mais trabalhos serão adicionados em breve.</p>
                 </div>
 
-                <div class="reveal group" style="transition-delay: 0.2s;">
-                    <div
-                        class="overflow-hidden rounded-[2.5rem] bg-[#1e293b] aspect-video mb-8 relative border border-white/5">
-                        <div
-                            class="absolute inset-0 bg-linear-to-t from-[#0f172a]/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-10">
-                            <span class="text-white text-sm font-semibold tracking-widest uppercase">Visualizar Caso de
-                                Estudo</span>
+                <div class="project-grid">
+                    <article class="project-card reveal">
+                        <a class="project-image-link project-image-church" href="https://igrejaembelohorizonte.com.br" target="_blank" rel="noopener noreferrer" aria-label="Visitar o site da Igreja em Belo Horizonte">
+                            <span class="project-image-fallback" aria-hidden="true">
+                                <span class="image-fallback-kicker">01 / SITE INSTITUCIONAL</span>
+                                <strong>Igreja em<br>Belo Horizonte</strong>
+                                <span class="image-fallback-foot">VISITE O SITE <b>↗</b></span>
+                            </span>
+                            <img class="project-image" src="Assets/img-1.png" alt="Captura do site da Igreja em Belo Horizonte" loading="lazy" decoding="async" width="1200" height="750">
+                            <span class="image-visit-badge" aria-hidden="true">VER SITE <span>↗</span></span>
+                        </a>
+                        <div class="project-info">
+                            <div class="project-meta"><span>INSTITUIÇÃO</span><span>DESENVOLVIMENTO WEB</span></div>
+                            <h3>Site para a Igreja em Belo Horizonte</h3>
+                            <p>Projeto institucional para fortalecer a presença digital de uma comunidade religiosa.</p>
+                            <a class="project-link" href="https://igrejaembelohorizonte.com.br" target="_blank" rel="noopener noreferrer">Visitar site <span aria-hidden="true">↗</span></a>
                         </div>
-                        <div
-                            class="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-1000">
-                            <span class="text-slate-500 font-black text-2xl uppercase tracking-tighter">Comércio
-                                Local</span>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <a class="project-image-link project-image-clinic" href="https://www.dramariliacarvalho.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar o site da clínica da Dra. Marília">
+                            <span class="project-image-fallback" aria-hidden="true">
+                                <span class="image-fallback-kicker">02 / ESTÉTICA</span>
+                                <strong>Dra. Marília<br>Carvalho</strong>
+                                <span class="image-fallback-foot">VISITE O SITE <b>↗</b></span>
+                            </span>
+                            <img class="project-image" src="Assets/img-2.png" alt="Captura do site da clínica de estética da Dra. Marília" loading="lazy" decoding="async" width="1200" height="750">
+                            <span class="image-visit-badge" aria-hidden="true">VER SITE <span>↗</span></span>
+                        </a>
+                        <div class="project-info">
+                            <div class="project-meta"><span>CLÍNICA DE ESTÉTICA</span><span>DESENVOLVIMENTO WEB</span></div>
+                            <h3>Clínica da Dra. Marília</h3>
+                            <p>Site para apresentar o trabalho da Dra. Marília na área de estética.</p>
+                            <a class="project-link" href="https://www.dramariliacarvalho.com" target="_blank" rel="noopener noreferrer">Visitar site <span aria-hidden="true">↗</span></a>
                         </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section-wrap section-space" id="contato">
+            <div class="contact-card reveal">
+                <div class="contact-orb" aria-hidden="true"></div>
+                <div class="contact-content">
+                    <div class="section-kicker"><span>04</span> / CONTATO</div>
+                    <h2>Tem uma ideia?<br><span class="serif-accent">Vamos conversar.</span></h2>
+                    <p>Conte um pouco sobre o seu projeto. O primeiro passo pode ser só uma conversa por e-mail.</p>
+                    <div class="contact-actions">
+                        <a class="button button-primary" href="mailto:miguelpacheco.br@gmail.com?subject=Vamos%20conversar%20sobre%20um%20site">
+                            <span class="mail-icon" aria-hidden="true">✉</span> miguelpacheco.br@gmail.com <span class="button-arrow" aria-hidden="true">↗</span>
+                        </a>
+                        <a class="github-link" href="https://github.com/MiguelPacheco7" target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil de Miguel Pacheco no GitHub">
+                            <span class="github-mark" aria-hidden="true">GH</span> GitHub <span aria-hidden="true">↗</span>
+                        </a>
                     </div>
-                    <h4 class="text-3xl font-bold mb-3">Boutique de Luxo</h4>
-                    <p class="text-slate-500 font-medium">Site Institucional & Catálogo Digital</p>
                 </div>
+                <div class="contact-side-mark" aria-hidden="true">MP<span>.</span></div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- CTA / Contato -->
-    <section id="contato" class="py-32 px-6">
-        <div class="max-w-4xl mx-auto glass-card p-16 md:p-24 rounded-[4rem] reveal text-center">
-            <h2 class="text-4xl md:text-7xl font-bold mb-10 italic serif">Vamos criar o seu próximo nível?</h2>
-            <p class="text-slate-400 mb-14 text-xl font-light">
-                Solicite um orçamento hoje e descubra como um design moderno pode transformar sua presença digital.
-            </p>
-            <div class="flex flex-col items-center gap-8">
-                <a href="https://wa.me/5531981114161?Text=Olá%20Miguel%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20desenvolvimento%20de%20sites%20que%20você%20oferece."
-                    class="inline-flex items-center gap-4 bg-indigo-600 hover:bg-indigo-700 text-white px-12 py-6 rounded-4xl font-black text-xl transition-all shadow-2xl shadow-indigo-500/30 btn-premium">
-                    <i data-lucide="message-circle"></i> Falar no WhatsApp
-                </a>
-                <div class="flex gap-8 text-slate-500">
-                    <a href="https://www.instagram.com/miguel.pacheco_m7?igsh=MXVmOXd6azBmNWQzOA==" class="hover:text-white transition-colors"><i data-lucide="instagram"></i></a>
-                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="linkedin"></i></a>
-                    <a href="mailto:miguelpacheco.br@gmail.com" class="hover:text-white transition-colors"><i data-lucide="mail"></i></a>
-                </div>
-            </div>
+    <footer class="site-footer">
+        <div class="section-wrap footer-inner">
+            <a class="brand footer-brand" href="#inicio" aria-label="Voltar ao início">
+                <span class="brand-mark" aria-hidden="true">MP</span>
+                <span class="brand-name">Miguel Pacheco<span class="brand-dot">.</span></span>
+            </a>
+            <p>Desenvolvimento web com intenção e cuidado.</p>
+            <span class="copyright">© <span id="current-year">2026</span> Miguel Pacheco</span>
         </div>
-    </section>
-
-    <footer class="py-16 border-t border-white/5 text-center">
-        <p class="text-slate-600 text-sm font-medium">© 2026 Miguel Alves Studio. Criando autoridade digital através do
-            design.</p>
     </footer>
 
-    <!-- Scripts -->
-     <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
-     <script defer src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
-
 </html>
