@@ -1,8 +1,6 @@
-import { inject } from '@vercel/analytics';
+import { inject } from "@vercel/analytics";
+inject({ mode: import.meta.env.DEV ? 'development' : 'production' });
 
-inject({
-  mode: import.meta.env.DEV ? 'development' : 'production',
-});
 
 
 document.documentElement.classList.add('js');
