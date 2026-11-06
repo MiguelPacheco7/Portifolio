@@ -1,3 +1,10 @@
+import { inject } from '@vercel/analytics';
+
+inject({
+  mode: import.meta.env.DEV ? 'development' : 'production',
+});
+
+
 document.documentElement.classList.add('js');
 
 const menuButton = document.querySelector('.menu-toggle');
