@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">MP — Miguel Pacheco</title>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c2444" />
+      <stop offset="1" stop-color="#0b1020" />
+    </linearGradient>
+    <linearGradient id="letters" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e1e2ff" />
+      <stop offset="1" stop-color="#a3a7ff" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#background)" />
+  <rect x="2.5" y="2.5" width="59" height="59" rx="15.5" fill="none" stroke="#a3a7ff" stroke-opacity=".48" />
+  <text x="32" y="41" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800" letter-spacing="-2.5" fill="url(#letters)">MP</text>
+</svg>
